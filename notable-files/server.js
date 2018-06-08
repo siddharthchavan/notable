@@ -3,9 +3,9 @@ var MongoClient = require("mongodb").MongoClient;
 var bodyParser = require("body-parser");
 var db = require("./config/db");
 
-var app = express();
+var port = process.env.PORT || 8080;
 
-var port = 3000;
+var app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
